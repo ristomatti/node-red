@@ -191,7 +191,7 @@ module.exports = function(grunt) {
                     ],
                     "packages/node_modules/@node-red/editor-client/public/vendor/vendor.css": [
                         // TODO: resolve relative resource paths in
-                        //       bootstrap/FA/jquery
+                        //       bootsztrap/FA/jquery
                     ],
                     "packages/node_modules/@node-red/editor-client/public/vendor/jsonata/jsonata.min.js": [
                         "node_modules/jsonata/jsonata-es5.min.js",
@@ -200,6 +200,14 @@ module.exports = function(grunt) {
                     "packages/node_modules/@node-red/editor-client/public/vendor/ace/worker-jsonata.js": [
                         "node_modules/jsonata/jsonata-es5.min.js",
                         "packages/node_modules/@node-red/editor-client/src/vendor/jsonata/worker-jsonata.js"
+                    ]
+                }
+            },
+            custom: {
+                files: {
+                    "packages/node_modules/@node-red/editor-client/public/custom/style.css": [
+                        "packages/node_modules/@node-red/editor-client/src/custom/css/node-red-solarized-dark-grey.css",
+                        "packages/node_modules/@node-red/editor-client/src/custom/css/node-red-solarized-nodes.css"
                     ]
                 }
             }
@@ -226,6 +234,10 @@ module.exports = function(grunt) {
                 {
                     dest: 'packages/node_modules/@node-red/editor-client/public/vendor/bootstrap/css/bootstrap.min.css',
                     src: 'packages/node_modules/@node-red/editor-client/src/vendor/bootstrap/css/bootstrap.css'
+                    },
+                {
+                    dest: 'packages/node_modules/@node-red/editor-client/public/custom/style.min.css',
+                    src: 'packages/node_modules/@node-red/editor-client/src/custom/style.css'
                 }]
             }
         },
@@ -263,7 +275,8 @@ module.exports = function(grunt) {
                     "packages/node_modules/@node-red/editor-client/public/index.html",
                     "packages/node_modules/@node-red/editor-client/public/favicon.ico",
                     "packages/node_modules/@node-red/editor-client/public/icons",
-                    "packages/node_modules/@node-red/editor-client/public/vendor"
+                    "packages/node_modules/@node-red/editor-client/public/vendor",
+                    "packages/node_modules/@node-red/editor-client/public/custom"
                 ]
             },
             release: {
@@ -592,7 +605,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build',
         'Builds editor content',
-        ['clean:build','jsonlint','concat:build','concat:vendor','copy:build','uglify:build','sass:build','attachCopyright']);
+        ['clean:build','jsonlint','concat:build','concat:vendor','concat:custom', 'copy:build','uglify:build','sass:build','attachCopyright']);
 
     grunt.registerTask('dev',
         'Developer mode: run node-red, watch for source changes and build/restart',
