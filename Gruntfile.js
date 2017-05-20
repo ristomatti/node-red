@@ -186,7 +186,7 @@ module.exports = function(grunt) {
                     ],
                     "public/vendor/vendor.css": [
                         // TODO: resolve relative resource paths in
-                        //       bootstrap/FA/jquery
+                        //       bootsztrap/FA/jquery
                     ],
                     "public/vendor/jsonata/jsonata.min.js": [
                         "node_modules/jsonata/jsonata-es5.min.js",
@@ -195,6 +195,14 @@ module.exports = function(grunt) {
                     "public/vendor/ace/worker-jsonata.js": [
                         "node_modules/jsonata/jsonata-es5.min.js",
                         "editor/vendor/jsonata/worker-jsonata.js"
+                    ]
+                }
+            },
+            custom: {
+                files: {
+                    "public/custom/style.css": [
+                        "editor/custom/css/node-red-solarized-dark-grey.css",
+                        "editor/custom/css/node-red-solarized-nodes.css"
                     ]
                 }
             }
@@ -221,6 +229,10 @@ module.exports = function(grunt) {
                 {
                     dest: 'public/vendor/bootstrap/css/bootstrap.min.css',
                     src: 'editor/vendor/bootstrap/css/bootstrap.css'
+                    },
+                {
+                    dest: 'public/custom/style.min.css',
+                    src: 'public/custom/style.css'
                 }]
             }
         },
@@ -258,7 +270,8 @@ module.exports = function(grunt) {
                     "public/index.html",
                     "public/favicon.ico",
                     "public/icons",
-                    "public/vendor"
+                    "public/vendor",
+                    "public/custom"
                 ]
             },
             release: {
@@ -501,7 +514,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build',
         'Builds editor content',
-        ['clean:build','jsonlint','concat:build','concat:vendor','copy:build','uglify:build','sass:build','attachCopyright']);
+        ['clean:build','jsonlint','concat:build','concat:vendor','concat:custom', 'copy:build','uglify:build','sass:build','attachCopyright']);
 
     grunt.registerTask('dev',
         'Developer mode: run node-red, watch for source changes and build/restart',
