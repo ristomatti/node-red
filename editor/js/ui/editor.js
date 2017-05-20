@@ -1920,7 +1920,7 @@ RED.editor = (function() {
 
         createEditor: function(options) {
             var editor = ace.edit(options.id||options.element);
-            editor.setTheme("ace/theme/tomorrow");
+            editor.setTheme("ace/theme/solarized_dark");
             var session = editor.getSession();
             session.on("changeAnnotation", function () {
                 var annotations = session.getAnnotations() || [];
