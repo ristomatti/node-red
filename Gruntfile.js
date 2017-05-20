@@ -210,6 +210,14 @@ module.exports = function(grunt) {
                         "packages/node_modules/@node-red/editor-client/src/custom/css/node-red-solarized-nodes.css"
                     ]
                 }
+            },
+            custom: {
+                files: {
+                    "public/custom/style.css": [
+                        "editor/custom/css/node-red-solarized-dark-grey.css",
+                        "editor/custom/css/node-red-solarized-nodes.css"
+                    ]
+                }
             }
         },
         uglify: {
@@ -237,7 +245,7 @@ module.exports = function(grunt) {
                     },
                 {
                     dest: 'packages/node_modules/@node-red/editor-client/public/custom/style.min.css',
-                    src: 'packages/node_modules/@node-red/editor-client/src/custom/style.css'
+                    src: 'packages/node_modules/@node-red/editor-client/public/custom/style.css'
                 }]
             }
         },
