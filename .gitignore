@@ -3,6 +3,7 @@
 .dist
 .jshintignore
 .npm
+.history
 .project
 .sessions.json
 .settings
