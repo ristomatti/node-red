@@ -32,7 +32,7 @@
 {{#page.css}}
 <link rel="stylesheet" href="{{.}}">
 {{/page.css}}
-
+<link rel="stylesheet" href="custom/style.min.css">
 </head>
 <body spellcheck="false">
 <div id="header">
