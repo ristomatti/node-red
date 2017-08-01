@@ -210,14 +210,6 @@ module.exports = function(grunt) {
                         "packages/node_modules/@node-red/editor-client/src/custom/css/node-red-solarized-nodes.css"
                     ]
                 }
-            },
-            custom: {
-                files: {
-                    "public/custom/style.css": [
-                        "editor/custom/css/node-red-solarized-dark-grey.css",
-                        "editor/custom/css/node-red-solarized-nodes.css"
-                    ]
-                }
             }
         },
         uglify: {
