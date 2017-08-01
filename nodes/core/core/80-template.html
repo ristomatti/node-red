@@ -130,6 +130,8 @@
                 mode: 'ace/mode/html',
                 value: $("#node-input-template").val()
             });
+            this.editor.setOption("enableEmmet", true);
+
             RED.library.create({
                 url:"functions", // where to get the data from
                 type:"function", // the type of object the library is for
