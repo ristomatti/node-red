@@ -205,14 +205,6 @@ module.exports = function(grunt) {
                         "editor/custom/css/node-red-solarized-nodes.css"
                     ]
                 }
-            },
-            custom: {
-                files: {
-                    "public/custom/style.css": [
-                        "editor/custom/css/node-red-solarized-dark-grey.css",
-                        "editor/custom/css/node-red-solarized-nodes.css"
-                    ]
-                }
             }
         },
         uglify: {
