@@ -619,6 +619,21 @@ select:focus:invalid:focus {
 #sidebar {
    background: #141414;
 }
+#sidebar .red-ui-stack {
+  background: #141414;
+}
+#sidebar table.node-info {
+  background-color: #212121;
+}
+#sidebar table.node-info tr:not(.blank) td:first-child {
+  background: inherit;
+}
+#sidebar .red-ui-stack .palette-category {
+  background: inherit;
+}
+#sidebar .node-info-tips {
+  background-color: inherit;
+}
 #sidebar.closing {
    background: #eee;
    border-color: #900;
@@ -645,6 +660,22 @@ select:focus:invalid:focus {
 #sidebar .button.selected:not(.disabled) {
    color: #AAA !important;
    background: #3a3a3a !important;
+}
+#sidebar .node-help .node-info-header {
+  color: #93a1a1;
+}
+#sidebar .node-help dl.message-properties>dt {
+  color: #b58900;
+}
+#sidebar .node-help dl.message-properties {
+  border: 1px solid #2e2e2e;
+}
+#sidebar .node-info-tips {
+  border-top: 1px solid #3a3a3a;
+}
+#sidebar .node-info-tips .help-key {
+  background: #2e2e2e;
+  border: 1px solid #3a3a3a;
 }
 .sidebar-header {
    color: #666;
