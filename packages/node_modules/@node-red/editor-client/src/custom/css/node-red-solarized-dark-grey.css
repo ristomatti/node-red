@@ -207,7 +207,7 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 div[contenteditable="true"]:focus,
 .uneditable-input:focus {
-   border-color: #2e2e2e;
+   border-color: #3a3a3a;
    outline: thin dotted \9;
 }
 select {
@@ -413,14 +413,19 @@ select:focus:invalid:focus {
 .ui-dialog .ui-dialog-titlebar {
    background: #2e2e2e;
 }
+.ui-spinner {
+  border: 1px solid #2e2e2e;
+}
 .ui-widget .ui-widget-content {
   border: 1px solid #212121;
   background: #141414;
 }
 .ui-state-default,
+.ui-widget-content,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
    background: #2e2e2e;
+   border: 1px solid #3a3a3a;
 }
 .ui-dialog-buttonset button {
   color: #93a1a1 !important;
@@ -628,6 +633,7 @@ select:focus:invalid:focus {
 #sidebar table.node-info tr:not(.blank) td:first-child {
   background: inherit;
 }
+#editor-stack .red-ui-stack .palette-category,
 #sidebar .red-ui-stack .palette-category {
   background: #2a2a2a;
 }
@@ -965,6 +971,11 @@ select:focus:invalid:focus {
 }
 .form-row {
    color: #444;
+}
+.form-row input,
+.form-row select {
+  background-color: #212121;
+  color: #93a1a1;
 }
 .form-tips {
    background: #3a3a3a;
