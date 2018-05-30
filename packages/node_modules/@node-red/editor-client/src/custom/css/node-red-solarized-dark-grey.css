@@ -629,7 +629,7 @@ select:focus:invalid:focus {
   background: inherit;
 }
 #sidebar .red-ui-stack .palette-category {
-  background: inherit;
+  background: #2a2a2a;
 }
 #sidebar .node-info-tips {
   background-color: inherit;
@@ -967,7 +967,8 @@ select:focus:invalid:focus {
    color: #444;
 }
 .form-tips {
-   background: #ffe;
+   background: #3a3a3a;
+   border: 1px solid #2e2e2e;
 }
 .editor-button {
    color: #586e75;
